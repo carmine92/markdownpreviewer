@@ -13,9 +13,10 @@ class App extends React.Component{
   }
 
   textChanged(event){
+    let newValue = event.target.value;
     this.setState(state => ({
-      basetext: event.target.value,
-      markedhtml: marked.parse(state.basetext ? state.basetext: ""),
+      basetext: newValue,
+      markedhtml: marked.parse(newValue ? newValue : ""),
     }))
   }
 
@@ -23,11 +24,13 @@ class App extends React.Component{
     return (
       <div className="App">
         <div className="mainContainer">
-          <textarea className="inputMarkup" onInput={this.textChanged.bind(this)} value={this.state.basetext}>
+          <textarea className="inputMarkup" 
+          onInput={this.textChanged.bind(this)} 
+          value={this.state.basetext}>
           </textarea>
-          <div className="markupPreview">
-            {this.state.markedhtml}
-          </div>
+
+          <div className="markupPreview" dangerouslySetInnerHTML={{__html:this.state.markedhtml}}/>
+          
         </div>
       </div>
     );
