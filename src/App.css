@@ -1,0 +1,27 @@
+.App {
+  text-align: center;
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.mainContainer {
+  background-color: #707888;
+  min-height: 100vh;
+  font-size: calc(10px + 2vmin);
+}
+
+.inputMarkup{
+  margin-top: 4em;
+  min-height: 10em;
+  width: 50%;
+}
+.markupPreview{
+  background-color: white;
+  height: 15em;
+  position: relative;
+}
