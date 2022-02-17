@@ -26,7 +26,8 @@ class App extends React.Component{
         <div className="mainContainer">
           <textarea className="inputMarkup" 
           onInput={this.textChanged.bind(this)} 
-          value={this.state.basetext}>
+          value={this.state.basetext}
+          >
           </textarea>
 
           <div className="markupPreview" dangerouslySetInnerHTML={{__html:this.state.markedhtml}}/>
