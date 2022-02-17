@@ -24,14 +24,23 @@ class App extends React.Component{
     return (
       <div className="App">
         <div className="mainContainer">
-          <textarea className="inputMarkup" 
-          onInput={this.textChanged.bind(this)} 
-          value={this.state.basetext}
-          >
-          </textarea>
+          <div className="editorBlock">
+            <div className="title">
+              <span>Editor</span>
+            </div>
+            <textarea className="inputMarkup" 
+            onInput={this.textChanged.bind(this)} 
+            value={this.state.basetext}
+            >
+            </textarea>
+          </div>
 
-          <div className="markupPreview" dangerouslySetInnerHTML={{__html:this.state.markedhtml}}/>
-          
+          <div className="previewBlock">
+            <div className="title">
+              <span>Preview</span>
+            </div>
+            <div className="markupPreview" dangerouslySetInnerHTML={{__html:this.state.markedhtml}}/>
+          </div>
         </div>
       </div>
     );

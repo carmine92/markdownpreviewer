@@ -2,33 +2,41 @@
   text-align: center;
 }
 
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .mainContainer {
   background-color: #707888;
   min-height: 100vh;
   font-size: calc(10px + 2vmin);
+  overflow-y: auto;
+}
+.title>span{
+  font-weight: 600;
 }
 
+.title{
+  text-align: left;
+  background-color:rgb(178, 187, 206) ;
+  border-radius: 10px 10px 0 0;
+}
+.editorBlock{
+  width: 80%;
+  margin:auto;
+}
 .inputMarkup{
-  margin-top: 4em;
   min-height: 10em;
-  width: 50%;
-  border-radius: 10px;
+  border-radius: 0 0 10px 10px;
   box-shadow: 0 9px 18px 0 #414040, 0 8px 24px 0 #414040;
+  width: 100%;
+}
+
+.previewBlock{
+  margin: 2em auto;
+  width:80%;
 }
 .markupPreview{
   position: relative;
   background-color: rgb(228, 236, 252);
-  height: 15em;
-  overflow-y: auto;
-  width:80%;
-  margin: 2em auto;
-  border-radius: 5px;
+  min-height: 15em;
+  margin: auto;
+  border-radius: 0 0 5px 5px;
   box-shadow: 0 9px 18px 0 #414040, 0 8px 24px 0 #414040;
 }
